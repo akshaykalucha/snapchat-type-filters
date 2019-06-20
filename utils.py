@@ -2,7 +2,7 @@ import cv2
 import os
 
 
-# source: https://stackoverflow.com/a/44659589
+
 def image_resize(image, width = None, height = None, inter = cv2.INTER_AREA):
     # initialize the dimensions of the image to be resized and
     # grab the image size
@@ -42,7 +42,7 @@ class CFEVideoConf(object):
         "4k": (3840, 2160),
     }
     # Video Encoding, might require additional installs
-    # Types of Codes: http://www.fourcc.org/codecs.php
+   
     VIDEO_TYPE = {
         'avi': cv2.VideoWriter_fourcc(*'XVID'),
         #'mp4': cv2.VideoWriter_fourcc(*'H264'),
@@ -61,7 +61,7 @@ class CFEVideoConf(object):
         self.video_type = self.get_video_type()
 
     # Set resolution for the video capture
-    # Function adapted from https://kirr.co/0l6qmh
+   
     def change_res(self, width, height):
         self.capture.set(3, width)
         self.capture.set(4, height)
